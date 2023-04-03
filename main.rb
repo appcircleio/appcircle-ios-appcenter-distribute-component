@@ -60,16 +60,19 @@ release_notes = get_env_variable('AC_APPCENTER_RELEASE_NOTES_PATH')
 mandatory = get_env_variable('AC_APPCENTER_MANDATORY')
 notify = get_env_variable('AC_APPCENTER_NOTIFY')
 store = get_env_variable('AC_APPCENTER_STORE')
+extra = get_env_variable('AC_APPCENTER_EXTRA')
 puts "Distributing: #{ipa_path}"
 
 cmd = "appcenter distribute release --token #{token} --app #{app} --file #{ipa_path}"
-cmd += " --release-notes-file #{release_notes}" if release_notes
+cmd += " --release-notes-file #{release_notes}" if release_notes && File.exist?(release_notes)
 cmd += " --group #{group}" if group
 cmd += " --store #{store}" if store
 cmd += ' --silent' if notify == 'false'
 cmd += ' --mandatory' if mandatory == 'true'
+cmd += " #{extra}" if extra
 
-run_command(cmd)
+result =  run_command(cmd)
+puts "Distribution report: \n\n #{result}"
 
 upload_dsym = get_env_variable('AC_APPCENTER_UPLOAD_DSYM')
 if upload_dsym == 'true'
@@ -77,5 +80,6 @@ if upload_dsym == 'true'
   dsym_path = upload_dsyms(archive_path)
   puts "Uploading dSYM: #{dsym_path}"
   cmd = "appcenter crashes upload-symbols --symbol #{dsym_path} --token #{token} --app #{app}"
-  run_command(cmd)
+  result = run_command(cmd)
+  puts "Upload dSYM report: \n\n #{result}"
 end

@@ -17,3 +17,5 @@ Distribute IPA and dSYM files to App Center.
 - `AC_APPCENTER_UPLOAD_DSYM`: Upload dSYM. Upload debug symbols.
 - `AC_APPCENTER_MANDATORY`: Mandatory Update. This parameter specifies whether the update should be considered mandatory or not.
 - `AC_APPCENTER_NOTIFY`: Notify Testers. Notify testers of this release.
+- `AC_APPCENTER_VERSION`: App Center CLI Version. Latest version will be used if no version is set.
+- `AC_APPCENTER_EXTRA`: Extra arguments. Extra command line arguments for appcenter. For example add  --debug for verbose logs.
