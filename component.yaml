@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform:
-displayName: App Center Distribute
+displayName: App Center iOS Distribute
 description: "Distribute IPA and dSYM files to App Center."
 inputs:
 - key: "AC_APPCENTER_TOKEN"
@@ -19,13 +19,13 @@ inputs:
   defaultValue: "$AC_APPCENTER_OWNER"
   isRequired: true
   title: Owner Name
-  description: "Owner of the app. The app's owner can be identified in its URL, such as https://appcenter.ms/users/JohnDoe/apps/myapp for a user-owned app (where **JohnDoe** is the owner) and https://appcenter.ms/orgs/Appcircle/apps/myapp for an org-owned app (owner is **Appcircle**)."
+  description: "Owner of the app. The app's owner can be identified in its URL, such as `https://appcenter.ms/users/JohnDoe/apps/myapp` for a user-owned app (where **JohnDoe** is the owner) and `https://appcenter.ms/orgs/Appcircle/apps/myapp` for an org-owned app (owner is **Appcircle**)."
   helpText:
 - key: "AC_APPCENTER_APPNAME"
   defaultValue: "$AC_APPCENTER_APPNAME"
   isRequired: true
   title: App Name
-  description: "The name of the app. The app's name can be identified in its URL, such as https://appcenter.ms/users/JohnDoe/apps/myapp for a user-owned app (where **myapp** is the app name) and https://appcenter.ms/orgs/Appcircle/apps/myapp for an org-owned app (owner is **myapp**)."
+  description: "The name of the app. The app's name can be identified in its URL, such as `https://appcenter.ms/users/JohnDoe/apps/myapp` for a user-owned app (where **myapp** is the app name) and `https://appcenter.ms/orgs/Appcircle/apps/myapp` for an org-owned app (owner is **myapp**)."
   helpText:
 - key: "AC_APPCENTER_GROUPS"
   defaultValue: "$AC_APPCENTER_GROUPS"
