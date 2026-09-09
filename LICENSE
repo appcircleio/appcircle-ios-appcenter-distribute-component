@@ -19,3 +19,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+DEPRECATION NOTICE
+
+This project is deprecated and unmaintained. Visual Studio App Center, the
+service this code integrates with, was retired by Microsoft on 31 March 2025.
+The repository is kept published for historical reference only.
+
+The MIT terms above continue to apply to the code as it stands. In addition,
+and without limiting the disclaimer above:
+
+  * No maintenance, updates, bug fixes or security patches will be provided.
+  * No support is offered through issues, pull requests or any other channel.
+  * The software is not guaranteed to work against any current or future
+    service endpoint, and may fail without notice.
+  * Any use of this software is entirely at your own risk.
+
+Appcircle gives no warranty of any kind regarding the continued operation,
+security or fitness for any purpose of this software, and accepts no liability
+arising from its use.
